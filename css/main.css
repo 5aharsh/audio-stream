@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+
+body{
+    background-color:#111 !important;
+    background-size:cover !important;
+    background-position:center !important;
+    color:#fff;
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+a{
+    color:#fff;
+}
+
+#opt-container{
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background:#333;
+    z-index:999;
+    opacity:0.6;
+    display:none;
+}
+
+#option{
+    border-radius:5px;
+    box-shadow:0px 0px 20px #333;
+    position:fixed;
+    background:#fff;
+    color:#333;
+    padding:20px;
+    left:50%;
+    top:1000%;
+    transform:translate(-50%, -50%);
+    z-index:999;
+    transition:all 0.2s ease;
+}
+
+#option a{
+    color:#222;
+}
+
+#error{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    z-index:999;
+    background:red;
+    padding:17px;
+    border-radius:10px;
+    top:1000%;
+    transition:all 0.2s ease;
+}
+
+#aud-title{
+    margin-top:100px;
+    background:#333;
+    display:inline-block;
+    padding:10px;
+    opacity:0.8;
+    transition:all 0.2s ease;
+}
+
+#aud-title:hover{
+    opacity:0.9;
+}
+
+#loading{
+    background:url('pixel/loader2.gif') center;
+    background-size:auto 100px;
+    height:50px;
+    width:100px;
+}
+
+#player{
+    background:#333;
+    position:fixed;
+    padding:25px 0px 25px 0px;
+    border:2px solid #333;
+    width:100%;
+    left:0;
+    bottom:0;
+    opacity:0.8;
+    transition:all 0.2s ease;
+}
+
+#player:hover{
+    opacity:0.9;
+}
+
+
+.player-btn{
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+
+#prev{
+    background:url('pixel/prev.png') #fff;
+    background-size:50px 50px;
+    background-position:center;
+}
+
+#play{
+    background:url('pixel/play.png') #fff;
+    background-size:50px 50px;
+    background-position:center;
+}
+
+#pause{
+    background:url('pixel/pause.png') #fff;
+    background-size:50px 50px;
+    background-position:center;
+}
+
+#next{
+    background:url('pixel/next.png') #fff;
+    background-size:50px 50px;
+    background-position:center;
+}
+
+.player-bar{
+    -webkit-appearance: none;
+    background-color: #fff;
+    position:relative;
+    width:250px;
+    height:10px;
+    cursor:pointer;
+    border-radius:10px;
+    top:-10px;
+}
+
+#vol{
+    padding-top:20px;
+}
+
+.player-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #111;
+    width: 20px;
+    border-radius:50%;
+    height: 20px;
+}
+
+.player-bar:focus{
+    outline:none;
+}
+
+/*************************|
+|*   Navigation stuffs   *|
+|*************************/
+
+#show-list{
+    border-radius:0 0 5px 0;
+    background:url('pixel/menu2.png') #000 no-repeat;
+    background-position:center;
+    background-size:40px 40px;
+    opacity:0.8;
+    padding:25px 28px;
+    position:fixed;
+    top:0;
+    left:0;
+    transition:all 0.2s ease;
+}
+
+#show-list:hover{
+    opacity:0.9;
+}
+
+nav #close-list{
+    display:block;
+    text-align:center;
+    background:url('pixel/close2.png') no-repeat;
+    background-position:center;
+    background-size:35px 35px;
+    width:100%;
+    padding:25px 0px;
+}
+
+nav#aud-list{
+    transition:all 0.4s ease;
+    position:fixed;
+    background:#111;
+    top:0px;
+    bottom:0;
+    left:-20%;
+    width:20%;
+    opacity:0.8;
+}
+
+nav#aud-list a{
+    color:#fff;
+}
+
+nav#aud-list ul{
+    list-style-type:none;
+    padding:0;
+    font-size:12px;
+    height:90%;
+    overflow-y:scroll;
+}
+
+nav#aud-list ul li{
+    padding:10px 20px;
+}
+
+nav#aud-list  ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+nav#aud-list  ul::-webkit-scrollbar-thumb {
+    background: #fff; 
+}
+
+nav#aud-list  ul::-webkit-scrollbar-thumb:hover {
+    background: #fff; 
+}
+
+/*************************|
+|*          phew         *|
+|*************************/

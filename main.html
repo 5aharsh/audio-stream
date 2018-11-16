@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audio Stream</title>
+		<link rel="stylesheet" href="./css/main.css"/>
+	</head>
+	<body id="container">
+        <a id="show-list" href="javascript:showList()"></a>
+        <div id="opt-container"></div>
+        <div id="option">
+            <h3><u>keys</u></h3>
+            <p><b>[M]</b> for mute</p>
+            <p><b>[B]</b> for last track</p>
+            <p><b>[N]</b> for next track</p>
+            <p><b>[Space]</b> for pause/play</p>
+            <p><b>[Arrow up]</b> for volume up</p>
+            <p><b>[Arrow down]</b> for volume down</p>
+            <center><b>[<a href="javascript:hideOption()">close</a>]</b></center>
+        </div>
+        <div id="error">playback error! skipping this one...</div>
+		<center>
+			<h2 id="aud-title"></h2>
+            <i id="loading"></i>
+			<div id="player">
+                <div id="control">
+                    <button id="prev" onclick="playPrev()" class="player-btn"></button>
+                    <button id="play" onclick="playSound()" class="player-btn"></button>
+                    <button id="pause" onclick="pauseSound()" style="display:none;" class="player-btn"></button>
+                    <button id="next" onclick="playNext()" class="player-btn"></button>
+                </div>
+                <div id="vol">
+                    <input type="range" value="1" id="vol-bar" class="player-bar" min="0" max="1" step="0.01" onmouseup="setVolume()">
+                </div>
+                <nav><a href="javascript:showOption()">[options]</a></nav>
+			</div>
+		</center>
+		<nav id="aud-list">
+            <a id="close-list" href="javascript:closeList()"></a>
+            <ul id="song-list">
+            </ul>
+		</nav>
+		<audio id="music" src="https://docs.google.com/uc?authuser=0&id=0B_WN56ek5XNocXV4MzRqY3RNa28&export=download"></audio>
+        <script src="./js/tracks.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
