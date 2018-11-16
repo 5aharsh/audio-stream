@@ -1,3 +1,5 @@
+//Last track in list is a dummy track to test error prompt
+
 var tracks = [
     {"name":"Anohana - Secret Base kimi ga kureta mono", "url":"https://docs.google.com/uc?authuser=0&id=0B_WN56ek5XNocXV4MzRqY3RNa28&export=download", "img":"https://i.imgur.com/ckz0JTs.jpg"},
     {"name":"Steins;Gate - Skyclad no Kansokusha", "url":"https://docs.google.com/uc?authuser=0&id=0B_WN56ek5XNoVzRRSlUybl8ybW8&export=download", "img":"https://i.imgur.com/BvBRGi0.jpg"},
@@ -49,4 +51,4 @@ var tracks = [
     {"name":"Fairy Tail - Towa no Kizuna", "url":"https://docs.google.com/uc?authuser=0&id=0B_WN56ek5XNodjJ4aGdkQlVQS1k&export=download", "img":"https://i.imgur.com/ihIqbsA.jpg"},
     {"name":"Sword Art Online - Yume Sekai", "url":"https://docs.google.com/uc?authuser=0&id=0B_WN56ek5XNoQU5tVDY4NUJWT0k&export=download", "img":"https://i.imgur.com/iccXJQ8.jpg"},
     {"name":"Dummy Song - dum dum", "url":"https://foo.foo", "img":"https://i.imgur.com/iccXJQ8.jpg"}
-];  
+];
