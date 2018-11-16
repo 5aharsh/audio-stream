@@ -12,6 +12,7 @@ var aud_title = document.getElementById("aud-title");
 var opt_container = document.getElementById("opt-container");
 var option = document.getElementById("option");
 var error = document.getElementById("error");
+var loader = document.getElementById("loading");
 
 for(var i=0;i<tracks.length; i++){
     track[i]=tracks[i]["url"];
