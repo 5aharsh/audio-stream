@@ -37,10 +37,9 @@ setInterval(
     function(){
         var curTime = music.currentTime;
         var bufTime = music.buffered;
-        var loader = document.getElementById("loading");
         if(bufTime.length>0){
-            if(curTime<bufTime.end(0)){
-                //not loading
+            console.log(curTime+" | "+bufTime.end(0))
+            if((bufTime.end(0)-curTime)>=3){
                 loader.style.display="none";
             }else{
                 loader.style.display="block";
