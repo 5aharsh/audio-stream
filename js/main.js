@@ -52,7 +52,6 @@ setInterval(
 );
 
 
-
 for(var i=0;i<track.length; i++){
     song_menu +="<li><a href=\"javascript:addTrack("+i+")\">"+tracks[i]["name"]+"</a></li>";
 }
