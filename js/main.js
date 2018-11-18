@@ -39,7 +39,6 @@ setInterval(
         var curTime = music.currentTime;
         var bufTime = music.buffered;
         if(bufTime.length>0){
-            console.log(curTime+" | "+bufTime.end(0))
             if((bufTime.end(0)-curTime)>=3){
                 loader.style.display="none";
             }else{
@@ -50,6 +49,7 @@ setInterval(
         }
     }, 1000
 );
+
 
 
 for(var i=0;i<track.length; i++){
@@ -112,43 +112,34 @@ document.body.onkeyup = function player(e){
 }
 
 function playSound(){
-    console.log("playSound init");
     var playPromise = music.play();
     if (playPromise !== undefined) {
-        console.log("inside playSound 'if'");
         playPromise.then(function() {
-            console.log("inside playSound promise-then");
-        }).catch(function(err) {
-            console.log("inside playSound promise-catch | error - "+err.name);        
+            //keeping empty for now
+            }).catch(function(err) {
             showError(err);
             setTimeout(hideError, 5000);
             if(err.name!="AbortError")
                 playNext();
         });
     }
-    console.log("after playSound if");
     document.getElementById("play").style.display="none";
     document.getElementById("pause").style.display="inline";
 }
 
 function playNext(){
-    console.log("playNext init");
     var f = playlist.shift();
     playlist[playlist.length] = f;
-    console.log("Next: "+playlist);
     addTrack(playlist[0]);
 }
 
 function playPrev(){
-    console.log("playPrev init");
     var f = playlist.pop();
     playlist.unshift(f);
-    console.log("Prev: "+playlist);
     addTrack(playlist[0]);
 }
 
 function addTrack(n){
-    console.log("addTrack init");
     body.style.background="url('"+background[n]+"') no-repeat";
     music.src=track[n];
     aud_title.innerHTML=title[n];
@@ -164,7 +155,6 @@ function setBar(){
 }
 
 function pauseSound(){
-    console.log("pauseSound init");
     music.pause();
     document.getElementById("play").style.display="inline";
     document.getElementById("pause").style.display="none";
@@ -191,7 +181,6 @@ function hideOption(){
 }
 
 function showError(err){
-    console.log("showError init");
     if(err.name!="AbortError"){
         error.innerHTML=err;
         opt_container.style.display="block";
@@ -200,7 +189,6 @@ function showError(err){
 }
 
 function hideError(){
-    console.log("hideError init");
     opt_container.style.display="none";
     error.style.top="1000%";
 }

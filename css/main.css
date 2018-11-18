@@ -15,6 +15,21 @@ a{
     color:#fff;
 }
 
+#github{
+    position:fixed;
+    background:url('pixel/octocat.png') no-repeat #fff center;
+    padding:25px 28px;
+    background-size:40px 40px;
+    right:0px;
+    border-radius:0 0 0 13px;
+    top:0px;
+    opacity:0.8;
+}
+
+#github:hover{
+    opacity:0.9;
+}
+
 #opt-container{
     position:fixed;
     left:0;
