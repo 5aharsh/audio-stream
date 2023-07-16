@@ -4,7 +4,7 @@ An application with JS and HTML5 audio streaming.
 Application can be used to stream any kind of audio file or bunch of them. In order to do so follow these steps - 
 
 1. Navigate to `js/tracks.js`
-2. Add `name`, `url' and `img` of track that needs to be added. Format will be like - 
+2. Add `name`, `url` and `img` of track that needs to be added. Format will be like - 
 <pre>
 {
   "name": "Just Awake - Hunter x Hunter",
