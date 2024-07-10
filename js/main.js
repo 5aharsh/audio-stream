@@ -28,7 +28,7 @@ playlist=shuffle(playlist);
 
 music.setAttribute("src", track[playlist[0]]);
 aud_title.innerHTML=title[playlist[0]];
-body.style.background="url('"+background[playlist[0]]+"') no-repeat";
+body.style.background="url("+background[playlist[0]]+") no-repeat";
 
 music.onended = function(){
     playNext();
@@ -55,7 +55,8 @@ setInterval(
 for(var i=0;i<track.length; i++){
     song_menu +="<li><a href=\"javascript:addTrack("+i+")\">"+tracks[i]["name"]+"</a></li>";
 }
-document.getElementById("song-list").innerHTML=song_menu;
+document.getElementById("song-list").innerHTML=song_menu;
+
 document.body.onkeyup = function player(e){    
     if(e.keyCode == 32){
         if(i==0){
